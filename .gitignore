@@ -45,4 +45,5 @@ www/bundle.js
 www/bundle.js.map
 www/extra.css
 platforms/
+src/svelte-shared/
 src/svelte-framework7-shared/
