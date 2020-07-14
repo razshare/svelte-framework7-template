@@ -1,9 +1,9 @@
 <script>
-	import OtherFramework7Styles from './shared/components/styles/OtherFramework7Styles.svelte';
-	import GridStyles from './shared/components/styles/GridStyles.svelte';
-	import PaddingStyles from './shared/components/styles/PaddingStyles.svelte';
-	import MarginStyles from './shared/components/styles/MarginStyles.svelte';
-	import OtherStyles from './shared/components/styles/OtherStyles.svelte';
+	import OtherStyles from './svelte-shared/components/styles/OtherStyles.svelte';
+	import MarginStyles from './svelte-shared/components/styles/MarginStyles.svelte';
+	import PaddingStyles from './svelte-shared/components/styles/PaddingStyles.svelte';
+	import GridStyles from './svelte-shared/components/styles/GridStyles.svelte';
+	import Framework7Styles from './svelte-framework7-shared/components/styles/Framework7Styles.svelte';
   import HomePage from './pages/HomePage.svelte';
   import {Router,Route} from 'svelte-routing';
   import {
@@ -23,7 +23,7 @@
 <MarginStyles />
 <PaddingStyles />
 <GridStyles />
-<OtherFramework7Styles />
+<Framework7Styles />
 <!-- STYLES COMPONENTS END -->
 <style>
   :global(#pre-style,#pre-loader){

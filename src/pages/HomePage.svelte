@@ -5,7 +5,9 @@
 		NavTitle,
 		NavRight,
 		Link,
-		Block
+		Block,
+		Button,
+		Icon
 	} from 'framework7-svelte';
 </script>
 
@@ -21,6 +23,15 @@
 	<Block class="p-0">
 		<div class="grid-x-center">
 			<span>Hello world</span>
+			<Button>This is a button</Button>
+			<span>
+				And this is an icon
+				<Icon material="settings" />
+			</span>
+			<Button>
+				Now this... is an icon inside a button!
+				<Icon material="settings" />
+			</Button>
 		</div>
 	</Block>
 </Page>

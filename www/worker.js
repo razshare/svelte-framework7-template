@@ -1,5 +1,5 @@
 const CACHE_NAME = 'assets';
-
+/*
 self.addEventListener('fetch', function(event) {
   console.log("fetching",event.request.url);
   event.respondWith(
@@ -17,6 +17,11 @@ self.addEventListener('fetch', function(event) {
               return response;
             }
 
+            //IMPORTANT: Ignore the "/watcher.js" script.
+            //This should be the only file in your application that does not get cached locally.
+            //The reason being is that this script should fulfill the function of an "updater" of sorts,
+            //which will notify the client when there's an update by uncaching specific files (implemented manually),
+            //and in order to do that this script must always be served directly by the server.
             if(event.request.url.endsWith("/watcher.js")) return response;
 
             // IMPORTANT: Clone the response. A response is a stream
@@ -36,7 +41,7 @@ self.addEventListener('fetch', function(event) {
       })
     );
 });
-
+*/
 
 function notify(title,body,vibrate=[200, 100, 200],icon='static/images/logo.png',tag=''){
   return this.registration.showNotification(title, {
