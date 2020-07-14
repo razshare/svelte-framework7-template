@@ -1,0 +1,4 @@
+# 1 YEAR
+<FilesMatch ".*(?!watcher.json$)">
+Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>

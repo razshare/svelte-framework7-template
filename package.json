@@ -1,0 +1,53 @@
+{
+  "name": "framework7-svelte",
+  "displayName": "SferanetMobile",
+  "version": "1.0.0",
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.10.1",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-css-only": "^2.0.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^4.0.4",
+    "sirv-cli": "^0.3.1"
+  },
+  "dependencies": {
+    "cordova-android": "^8.1.0",
+    "cordova-browser": "^6.0.0",
+    "cordova-plugin-background-fetch": "^6.1.0",
+    "cordova-plugin-background-service": "^1.3.5",
+    "cordova-plugin-badge": "^0.8.8",
+    "cordova-plugin-device": "^2.0.3",
+    "cordova-plugin-local-notification": "^0.9.0-beta.2",
+    "framework7": "^5.7.8",
+    "framework7-icons": "^3.0.1",
+    "framework7-svelte": "^5.7.8",
+    "stompjs": "^2.3.3",
+    "svelte": "^3.23.2",
+    "svelte-routing": "^1.4.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "dev": "rollup -c -w",
+    "dev1": "run-p start:dev autobuild",
+    "start": "sirv www",
+    "start:dev": "sirv www --dev"
+  },
+  "keywords": [],
+  "description": "",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-background-service": {},
+      "cordova-plugin-local-notification": {}
+    },
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  }
+}
