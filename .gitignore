@@ -47,6 +47,6 @@ www/extra.css
 .vscode/settings.json
 src/svelte-shared/
 src/svelte-framework7-shared/
-android/
-ios/
-electron/
+android/*
+ios/*
+electron/*
