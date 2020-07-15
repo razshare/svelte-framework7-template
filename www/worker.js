@@ -1,5 +1,6 @@
 const CACHE_NAME = 'assets';
-/*
+const CACHE_ENABLED = true;
+if(CACHE_ENABLED)
 self.addEventListener('fetch', function(event) {
   console.log("fetching",event.request.url);
   event.respondWith(
@@ -41,7 +42,7 @@ self.addEventListener('fetch', function(event) {
       })
     );
 });
-*/
+
 
 function notify(title,body,vibrate=[200, 100, 200],icon='static/images/logo.png',tag=''){
   return this.registration.showNotification(title, {

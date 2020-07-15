@@ -13,9 +13,9 @@
 </script>
 <App>
   <Router url="{url}">
-    <Route path="{window.cordova?'/android_asset/www':''}/" component="{HomePage}" />
-    <Route path="{window.cordova?'/android_asset/www':''}/home" component="{HomePage}" />
-    <Route path="{window.cordova?'/android_asset/www':''}/index.html" component="{HomePage}" />
+    <Route path="/" component="{HomePage}" />
+    <Route path="/home" component="{HomePage}" />
+    <Route path="/index.html" component="{HomePage}" />
   </Router>
 </App>
 <!-- STYLES COMPONENTS START -->
