@@ -1,0 +1,15 @@
+{
+  "appId": "com.company.department",
+  "appName": "svelte-framework7-template",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {
+    "preferences": {}
+  }
+}
