@@ -18,25 +18,14 @@
     <Route path="/index.html" component="{HomePage}" />
   </Router>
 </App>
-<!-- STYLES COMPONENTS START -->
+<!-- STYLING COMPONENTS START -->
 <OtherStyles />
 <MarginStyles />
 <PaddingStyles />
 <GridStyles />
-<Framework7Styles />
-<!-- STYLES COMPONENTS END -->
+<!-- <Framework7Styles /> -->
+<!-- STYLING COMPONENTS END -->
 <style>
-  :global(#pre-style,#pre-loader){
-    display: none;
-  }
-  /*############## MAIN STYLE ###############*/
-  :global(*:not(input,textarea,p,span)){
-    -webkit-touch-callout: none !important;
-    -webkit-user-select: none !important;
-  }
-  :global(html){
-    overscroll-behavior: none;
-  }
   /* Custom color theme properties */
   :global(:root) {
     --f7-theme-color: #F17010;
@@ -44,9 +33,4 @@
     --f7-theme-color-shade: #cc5e0c;
     --f7-theme-color-tint: #f38737;
   }
-  :global(hr){
-		border: 0;
-		height: 1px;
-		background: rgba(0,0,0,0.125);
-	}
 </style>

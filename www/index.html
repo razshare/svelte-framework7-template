@@ -10,66 +10,12 @@
 		<link rel="manifest" href="manifest.json">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link async rel="apple-touch-icon" href="static/images/icons/apple-touch-icon.png" media="none" onload="if(media!='all')media='all'">
-		<link async rel="icon" href="static/images/icons/favicon.png" media="none" onload="if(media!='all')media='all'">
+		<link async rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png" media="none" onload="if(media!='all')media='all'">
+		<link async rel="icon" href="assets/images/icons/favicon.png" media="none" onload="if(media!='all')media='all'">
 		<title>Svelte Framework7 Template</title>
 	</head>
 
 	<body>
-		<div id="pre-loader">
-			<div style="display: grid;justify-items: center;">
-				<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-			</div>
-		</div>
-		<style id="pre-style">
-			#pre-loader{
-				font-family: Tahoma;
-				position: fixed;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				background: #ffffff;
-				display: grid;
-				align-items: center;
-				justify-items: center;;
-			}
-			.lds-ring {
-				display: inline-block;
-				position: relative;
-				width: 80px;
-				height: 80px;
-			}
-			.lds-ring div {
-				box-sizing: border-box;
-				display: block;
-				position: absolute;
-				width: 64px;
-				height: 64px;
-				margin: 8px;
-				border: 8px solid #fff;
-				border-radius: 50%;
-				animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-				border-color: #fff transparent transparent transparent;
-			}
-			.lds-ring div:nth-child(1) {
-				animation-delay: -0.45s;
-			}
-			.lds-ring div:nth-child(2) {
-				animation-delay: -0.3s;
-			}
-			.lds-ring div:nth-child(3) {
-				animation-delay: -0.15s;
-			}
-			@keyframes lds-ring {
-				0% {
-					transform: rotate(0deg);
-				}
-				100% {
-					transform: rotate(360deg);
-				}
-			}
-		</style>
 		<div id="root"></div>
 		<link id="extraCss" rel='stylesheet' href='extra.css' media='none' onload='media="all"'>
 		<link id="bundleCss" rel='stylesheet' href='bundle.css' media='none' onload='media="all"'>

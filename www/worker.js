@@ -44,7 +44,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 
-function notify(title,body,vibrate=[200, 100, 200],icon='static/images/logo.png',tag=''){
+function notify(title,body,vibrate=[200, 100, 200],icon='assets/images/logo.png',tag=''){
   return this.registration.showNotification(title, {
       body: body,
       icon: icon,
