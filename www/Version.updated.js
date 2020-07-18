@@ -1,6 +1,6 @@
 "use strict"
 class Version{
-    static #REMOTE_VERSION_NUMBER = 2;
+    static #REMOTE_VERSION_NUMBER = 2;  //Set this manually to your current version number
     static #LOCAL_VERSION_NUMBER = undefined;
     static #worker = "worker.js";
     static setWorkerName(fileName){
@@ -17,6 +17,10 @@ class Version{
         this.#LOCAL_VERSION_NUMBER = version;
     }
     static available(){
+        if(this.#LOCAL_VERSION_NUMBER === undefined){
+            console.warning("Please specify the local version number by calling Version.setLocalVersionNumber(<number>).");
+            return warn;
+        }
         return this.#REMOTE_VERSION_NUMBER > this.#LOCAL_VERSION_NUMBER;
     }
     static getRemoteVersionNumber(){
