@@ -10,6 +10,21 @@
 		Icon
 	} from 'framework7-svelte';
   import install from '../svelte-shared/scripts/install.js';
+  import VersionNumber from '../svelte-shared/scripts/VersionNumber.js';
+  
+  let LOCAL_VERSION_NUMBER = 5;
+  let versionAvailable = false;
+  let version;
+  
+  VersionNumber.watch(v=>{
+    version = v;
+	version.setLocalVersionNumber(LOCAL_VERSION_NUMBER);
+	versionAvailable = version.available();
+	console.log("LOCAL_VERSION_NUMBER",LOCAL_VERSION_NUMBER);
+	console.log("REMOTE_VERSION_NUMBER",version.getRemoteVersionNumber());
+  },{
+	  delay: 500
+  });
 </script>
 
 <Page>
@@ -38,6 +53,11 @@
 			}}>
 				Cache me in!
 			</Button>
+			{#if versionAvailable}
+				<Button onClick={()=>{
+					version.update()
+				}}>New version available, update now!</Button>
+			{/if}
 		</div>
 	</Block>
 </Page>

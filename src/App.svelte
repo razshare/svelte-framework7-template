@@ -5,12 +5,10 @@
 	import GridStyles from './svelte-shared/components/styles/GridStyles.svelte';
 	import Framework7Styles from './svelte-framework7-shared/components/styles/Framework7Styles.svelte';
   import HomePage from './pages/HomePage.svelte';
+  import worker from './svelte-shared/stores/worker.js';
   import { Router, Route } from 'svelte-routing';
   import { App } from 'framework7-svelte';
   let url = window.location.pathname;
-  const LOCAL_VERSION_NUMBER = 1;
-  Version.setLocalVersionNumber(LOCAL_VERSION_NUMBER);
-  console.log("New version available?",Version.available());
 </script>
 <App>
   <Router url="{url}">

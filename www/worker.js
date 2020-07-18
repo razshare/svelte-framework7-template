@@ -1,4 +1,4 @@
-const CACHE_NAME = 'assets';
+const CACHE_NAME = 'www';
 const CACHE_ENABLED = true;
 
 function cacheRequestResponse(request,response){
