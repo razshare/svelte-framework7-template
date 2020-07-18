@@ -5,10 +5,8 @@
 	import GridStyles from './svelte-shared/components/styles/GridStyles.svelte';
 	import Framework7Styles from './svelte-framework7-shared/components/styles/Framework7Styles.svelte';
   import HomePage from './pages/HomePage.svelte';
-  import {Router,Route} from 'svelte-routing';
-  import {
-    App,
-  } from 'framework7-svelte';
+  import { Router, Route } from 'svelte-routing';
+  import { App } from 'framework7-svelte';
   let url = window.location.pathname;
   const LOCAL_VERSION_NUMBER = 1;
   Version.setLocalVersionNumber(LOCAL_VERSION_NUMBER);
