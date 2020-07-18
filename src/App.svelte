@@ -10,6 +10,9 @@
     App,
   } from 'framework7-svelte';
   let url = window.location.pathname;
+  const LOCAL_VERSION_NUMBER = 1;
+  Version.setLocalVersionNumber(LOCAL_VERSION_NUMBER);
+  console.log("New version available?",Version.available());
 </script>
 <App>
   <Router url="{url}">

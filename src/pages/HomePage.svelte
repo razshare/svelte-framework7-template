@@ -9,6 +9,7 @@
 		Button,
 		Icon
 	} from 'framework7-svelte';
+  import install from '../svelte-shared/scripts/install.js';
 </script>
 
 <Page>
@@ -31,6 +32,11 @@
 			<Button>
 				Now this... is an icon inside a button!
 				<Icon material="settings" />
+			</Button>
+			<Button onClick={()=>{
+				install();
+			}}>
+				Cache me in!
 			</Button>
 		</div>
 	</Block>
