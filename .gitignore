@@ -39,11 +39,11 @@ Thumbs.db
 
 
 # Production build
-www/bundle/bundle.css
-www/bundle/bundle.css.map
-www/bundle/bundle.js
-www/bundle/bundle.js.map
-www/bundle/extra.css
+public/build/bundle.css
+public/build/bundle.css.map
+public/build/bundle.js
+public/build/bundle.js.map
+public/build/extra.css
 .vscode/settings.json
 src/svelte-shared/
 src/svelte-framework7-shared/
