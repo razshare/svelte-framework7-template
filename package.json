@@ -1,6 +1,6 @@
 {
   "name": "framework7-svelte",
-  "displayName": "SferanetMobile",
+  "displayName": "Svelte Framework7 Template & Capacitor",
   "version": "1.0.0",
   "devDependencies": {
     "cordova-plugin-whitelist": "^1.3.4",
@@ -30,20 +30,9 @@
     "autobuild": "rollup -c -w",
     "dev": "rollup -c -w",
     "dev1": "run-p start:dev autobuild",
-    "start": "sirv www",
-    "start:dev": "sirv www --dev"
+    "start": "sirv public",
+    "start:dev": "sirv public --dev"
   },
   "keywords": [],
-  "description": "",
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-background-service": {},
-      "cordova-plugin-local-notification": {}
-    },
-    "platforms": [
-      "android",
-      "browser"
-    ]
-  }
+  "description": ""
 }
