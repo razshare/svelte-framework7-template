@@ -45,8 +45,8 @@ public/build/bundle.js
 public/build/bundle.js.map
 public/build/extra.css
 .vscode/settings.json
-src/svelte-shared/
-src/svelte-framework7-shared/
+src/svelte-shared/.git/
+src/svelte-framework7-shared/.git
 android/*
 ios/*
 electron/*
