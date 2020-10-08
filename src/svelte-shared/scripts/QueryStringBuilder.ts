@@ -1,5 +1,7 @@
-export default function QueryStringBuilder(url){
-	let queries = {
+export default class QueryStringBuilder{
+
+	private url:string;
+	private queries:{[key:string]:any} = {
 		/*<COL_NAME>: {
 			equals: {},
 			notEquals: {},
@@ -10,56 +12,63 @@ export default function QueryStringBuilder(url){
 			between: {},
 		}*/
 	};
-
-	this.like=function(key,value){
-		this.equals(key,"%"+value+"%");
+	constructor(url){
+		this.url = url;
 	}
 
-	this.equals=function(key,value){
-		if(!queries[key+""]) queries[key+""] = {};
-		if(!queries[key+""].equals) queries[key+""].equals = [];
-		queries[key+""].equals.push(value+"");
-		return this;
-	};
-	this.notEquals=function(key,value){
-		if(!queries[key+""]) queries[key+""] = {};
-		if(!queries[key+""].notEquals) queries[key+""].notEquals = [];
-		queries[key+""].notEquals.push(value+"");
-		return this;
-	};
-	this.greaterThan=function(key,value){
-		if(!queries[key+""]) queries[key+""] = {};
-		if(!queries[key+""].greaterThan) queries[key+""].greaterThan = [];
-		queries[key+""].greaterThan.push(value+"");
-		return this;
-	};
-	this.lesserThan=function(key,value){
-		if(!queries[key+""]) queries[key+""] = {};
-		if(!queries[key+""].lesserThan) queries[key+""].lesserThan = [];
-		queries[key+""].lesserThan.push(value+"");
-		return this;
-	};
-	this.empty=function(key){
-		if(!queries[key+""]) queries[key+""] = {};
-		if(!queries[key+""].empty) queries[key+""].empty = true;
-		return this;
-	};
-	this.notEmpty=function(key){
-		if(!queries[key+""]) queries[key+""] = {};
-		if(!queries[key+""].notEmpty) queries[key+""].notEmpty = true;
-		return this;
-	};
-	this.between=function(key,start,end){
-		if(!queries[key+""]) queries[key+""] = {};
-		if(!queries[key+""].between) queries[key+""].between = [];
-		queries[key+""].between.push({start,end});
-		return this;
-	};
+	like(key,value):QueryStringBuilder{
+		return this.equals(key,"%"+value+"%");
+	}
 
-	this.toString=function(){
+	equals(key,value):QueryStringBuilder{
+		if(!this.queries[key+""]) this.queries[key+""] = {};
+		if(!this.queries[key+""].equals) this.queries[key+""].equals = [];
+		this.queries[key+""].equals.push(value+"");
+		return this;
+	}
+	notEquals(key,value):QueryStringBuilder{
+		if(!this.queries[key+""]) this.queries[key+""] = {};
+		if(!this.queries[key+""].notEquals) this.queries[key+""].notEquals = [];
+		this.queries[key+""].notEquals.push(value+"");
+		return this;
+	}
+	greaterThan(key,value):QueryStringBuilder{
+		if(!this.queries[key+""]) this.queries[key+""] = {};
+		if(!this.queries[key+""].greaterThan) this.queries[key+""].greaterThan = [];
+		this.queries[key+""].greaterThan.push(value+"");
+		return this;
+	}
+	lesserThan(key,value):QueryStringBuilder{
+		if(!this.queries[key+""]) this.queries[key+""] = {};
+		if(!this.queries[key+""].lesserThan) this.queries[key+""].lesserThan = [];
+		this.queries[key+""].lesserThan.push(value+"");
+		return this;
+	}
+	empty(key):QueryStringBuilder{
+		if(!this.queries[key+""]) this.queries[key+""] = {};
+		if(!this.queries[key+""].empty) this.queries[key+""].empty = true;
+		return this;
+	}
+	notEmpty(key):QueryStringBuilder{
+		if(!this.queries[key+""]) this.queries[key+""] = {};
+		if(!this.queries[key+""].notEmpty) this.queries[key+""].notEmpty = true;
+		return this;
+	}
+	between(key,start,end):QueryStringBuilder{
+		if(!this.queries[key+""]) this.queries[key+""] = {};
+		if(!this.queries[key+""].between) this.queries[key+""].between = [];
+		this.queries[key+""].between.push({start,end});
+		return this;
+	}
+
+	countQueries():number{
+		return Object.keys(this.queries).length;
+	}
+
+	toString():string{
 		let qss = new Array();
-		for(let colmnName in queries){
-			let operations = queries[colmnName];
+		for(let colmnName in this.queries){
+			let operations = this.queries[colmnName];
 			let qs = "";
 			let i = 0;
 			for(let operationName in operations){
@@ -115,6 +124,6 @@ export default function QueryStringBuilder(url){
 			qss.push(qs);
 		}
 
-		return url+"?"+qss.join("&");
+		return this.url+"?"+qss.join("&");
 	}
 }

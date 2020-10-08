@@ -1,4 +1,4 @@
-export default function slotify(e,mapping){
+export default function slotify(e,mapping):void{
     for(let key in mapping){
         let elements = new Array();
         for(let child of e.children){

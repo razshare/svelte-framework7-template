@@ -1,4 +1,4 @@
-export default function sortBy(key,reverse){
+export default function sortBy(key,reverse):Function{
 	// Move smaller items towards the front
 	// or back of the array depending on if
 	// we want to sort the array in reverse

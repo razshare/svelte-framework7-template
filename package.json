@@ -2,19 +2,37 @@
   "name": "framework7-svelte",
   "displayName": "Svelte Framework7 Template & Capacitor",
   "version": "1.0.0",
+  "scripts": {
+    "validate": "svelte-check",
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "dev": "rollup -c -w",
+    "dev1": "run-p start:dev autobuild",
+    "start": "sirv public",
+    "start:dev": "sirv public --dev"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^6.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "svelte-check": "^1.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "typescript": "^3.9.3",
+    "tslib": "^2.0.0",
+    "@tsconfig/svelte": "^1.0.0",
     "cordova-plugin-whitelist": "^1.3.4",
     "npm-run-all": "^4.1.5",
-    "rollup": "^1.10.1",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-css-only": "^2.0.0",
-    "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-svelte": "^5.0.3",
-    "rollup-plugin-terser": "^4.0.4",
-    "sirv-cli": "^0.3.1"
+    "rollup-plugin-node-resolve": "^4.2.3"
   },
   "dependencies": {
+    "sirv-cli": "^1.0.0",
     "@capacitor/android": "^2.2.1",
     "@capacitor/cli": "^2.2.1",
     "@capacitor/core": "^2.2.1",
@@ -24,15 +42,5 @@
     "stompjs": "^2.3.3",
     "svelte": "^3.23.2",
     "svelte-routing": "^1.4.2"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "autobuild": "rollup -c -w",
-    "dev": "rollup -c -w",
-    "dev1": "run-p start:dev autobuild",
-    "start": "sirv public",
-    "start:dev": "sirv public --dev"
-  },
-  "keywords": [],
-  "description": ""
+  }
 }

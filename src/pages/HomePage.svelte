@@ -9,14 +9,14 @@
 		Button,
 		Icon
 	} from 'framework7-svelte';
-  import install from '../svelte-shared/scripts/install.js';
-  import VersionNumber from '../svelte-shared/scripts/VersionNumber.js';
+  import install from '../svelte-shared/scripts/install';
+  import VersionManager from '../svelte-shared/scripts/VersionManager';
   
   let LOCAL_VERSION_NUMBER = 5;
   let versionAvailable = false;
   let version;
   
-  VersionNumber.watch(v=>{
+  VersionManager.watch(v=>{
     version = v;
 	version.setLocalVersionNumber(LOCAL_VERSION_NUMBER);
 	versionAvailable = version.available();

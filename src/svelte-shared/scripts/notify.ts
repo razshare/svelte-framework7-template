@@ -3,7 +3,14 @@ import Permission from './Permission.js';
 import { Plugins } from '@capacitor/core';
 const { LocalNotifications } = Plugins;
 
-export default async function notify(title,body,delay=1,vibrate=[200, 100, 200],icon='static/images/logo.png',tag=''){
+export default async function notify(
+	title:string,
+	body:string,
+	delay:number=1,
+	vibrate:Array<number>=[200, 100, 200],
+	icon:string='static/images/logo.png',
+	tag:string=''
+):Promise<void>{
 	if(!await Permission.requestLocalNotificationPermission()){
 		console.warn("Notification won't be sent because notification permission has not been granted.");
 		return;

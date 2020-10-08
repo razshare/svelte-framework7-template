@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { Writable, writable } from 'svelte/store';
 
 let store = {
 	login: "Login",
@@ -25,6 +25,6 @@ let store = {
 	toPopATag: "to pop a tag",
 };
 
-const language = writable(store);
+const language:Writable<any> = writable(store);
 
 export default storageExists;

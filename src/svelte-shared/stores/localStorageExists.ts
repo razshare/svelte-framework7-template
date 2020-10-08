@@ -1,5 +1,5 @@
-import { writable } from 'svelte/store';
-import uuid from './../scripts/uuid.js';
+import { Writable, writable } from 'svelte/store';
+import uuid from '../scripts/uuid';
 
 let test = uuid();
 let store = false;
@@ -12,6 +12,6 @@ try {
 	store = false;
 }
 
-const localStorageExists = writable(store);
+const localStorageExists:Writable<any> = writable(store);
 
 export default localStorageExists;

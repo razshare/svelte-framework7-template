@@ -28,7 +28,7 @@
 		},2000);
 */
 
-export default function style(o){
+export default function style(o:any):string{
 	let getStyle=function(o){
 		let result = "";
 		let keys = Object.keys(o);

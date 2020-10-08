@@ -1,6 +1,6 @@
-export default async function sha256(message) {
+export default async function sha256(message):Promise<string>{
 	// encode as UTF-8
-	const msgBuffer = new TextEncoder('utf-8').encode(message);                    
+	const msgBuffer = new TextEncoder().encode(message);                    
 
 	// hash the message
 	const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);

@@ -1,6 +1,6 @@
-import {writable} from 'svelte/store';
+import {Writable, writable} from 'svelte/store';
 
-const worker = writable(null);
+const worker:Writable<any> = writable(null);
 async function find(registrations){
 	if(registrations.length > 0){
 		let reg = null;

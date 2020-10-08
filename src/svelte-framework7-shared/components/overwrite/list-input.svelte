@@ -85,9 +85,19 @@
   let updateInputOnDidUpdate = false;
   let f7Calendar;
   let f7ColorPicker;
+  let inputElTextable;
   function setType(e){
+    inputElTextable = e;
     e.setAttribute("type",inputType);
   }
+
+  function onTypeChange(t){
+    if(inputEl)
+      inputEl.setAttribute("type",t);
+  }
+
+  $:onTypeChange(inputType);
+
   export function calendarInstance() {
     return f7Calendar;
   }

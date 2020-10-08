@@ -1,7 +1,7 @@
 import Permission from './Permission.js';
 import { Plugins } from '@capacitor/core';
 const { PushNotifications } = Plugins;
-export default async function addPushNotificationsEventListener(){
+export default async function addPushNotificationsEventListener():Promise<void>{
     if(!await Permission.requestPushNotificationPermission()){
 		  console.warn("Push Notifications permission not granted.");
       return;
