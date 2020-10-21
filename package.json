@@ -6,6 +6,7 @@
     "validate": "svelte-check",
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "start": "sirv public",
     
     "add-android": "npx cap add android",
     "add-ios": "npx cap add ios",
