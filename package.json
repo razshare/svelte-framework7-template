@@ -5,11 +5,19 @@
   "scripts": {
     "validate": "svelte-check",
     "build": "rollup -c",
-    "autobuild": "rollup -c -w",
     "dev": "rollup -c -w",
-    "dev1": "run-p start:dev autobuild",
-    "start": "sirv public",
-    "start:dev": "sirv public --dev"
+    
+    "update-android": "npx cap copy android",
+    "update-ios": "npx cap copy ios",
+    "update-electron": "npx cap copy electron",
+
+    "open-android": "npx cap open android",
+    "open-ios": "npx cap open ios",
+    "open-electron": "npx cap open electron",
+    
+    "build-android": "npx cap open android",
+    "build-ios": "npx cap open ios",
+    "build-electron": "npx cap open electron"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
