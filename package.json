@@ -32,13 +32,15 @@
     "rollup-plugin-node-resolve": "^4.2.3"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0",
-    "@capacitor/android": "^2.2.1",
-    "@capacitor/cli": "^2.2.1",
-    "@capacitor/core": "^2.2.1",
+    "@capacitor/android": "^2.4.2",
+    "@capacitor/cli": "^2.4.2",
+    "@capacitor/core": "^2.4.2",
+    "@capacitor/electron": "^2.4.2",
+    "@capacitor/ios": "^2.4.2",
     "framework7": "^5.7.8",
     "framework7-icons": "^3.0.1",
     "framework7-svelte": "^5.7.8",
+    "sirv-cli": "^1.0.0",
     "stompjs": "^2.3.3",
     "svelte": "^3.23.2",
     "svelte-routing": "^1.4.2"
