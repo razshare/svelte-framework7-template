@@ -7,6 +7,10 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     
+    "add-android": "npx cap add android",
+    "add-ios": "npx cap add ios",
+    "add-electron": "npx cap add electron",
+
     "update-android": "npx cap copy android",
     "update-ios": "npx cap copy ios",
     "update-electron": "npx cap copy electron",
